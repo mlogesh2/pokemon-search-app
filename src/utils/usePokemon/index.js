@@ -24,9 +24,17 @@ export default function usePokemon() {
     setIsLoading(true);
     const res = await fetch(`https://pokeapi.co/api/v2/type/${type}`);
     const data = await res.json();
-    const pokemonList = await fetchPokemonWithImages(data.pokemon);
+    // Fetch images from pokemon details API
+    // const pokemonList = await fetchPokemonWithImages(data.pokemon);
+    // Form image URL by using id
+    const pokemonList = data.pokemon.map(({pokemon}) => {
+      const id = pokemon?.url?.split("/")?.[6]
+      return {
+        name: pokemon.name,
+        image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
+      }
+    })
     setIsLoading(false);
-    console.log("pokemonList: ", pokemonList);
     setPokemons(pokemonList);
   }
 
