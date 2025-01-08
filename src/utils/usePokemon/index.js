@@ -60,5 +60,5 @@ export default function usePokemon() {
     return results;
   }
 
-  return { types, pokemons, fetchPokemonsByType, fetchPokemonWithImages, getPokemonDetails };
+  return { isLoading, types, pokemons, fetchPokemonsByType, fetchPokemonWithImages, getPokemonDetails };
 }
