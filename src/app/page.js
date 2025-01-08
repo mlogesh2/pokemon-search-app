@@ -34,10 +34,10 @@ export default function Home() {
 
   return (
     <div>
-      <h1 data-wow-duration={"1s"} className="wow animate__fadeIn text-3xl font-bold mb-4">Pokémon Search App</h1>
+      <h1 data-wow-duration={"1s"} className="wow animate__fadeIn text-black text-3xl font-bold mb-4">Pokémon Search App</h1>
       <div className="flex flex-col gap-4 mb-6">
         <select
-          className="p-2 border rounded capitalize max-w-[200px]"
+          className="text-black p-2 border rounded capitalize max-w-[200px]"
           value={selectedType}
           onChange={async (e) => {
             const type = e.target.value;
@@ -59,7 +59,7 @@ export default function Home() {
           </span>
           <input
             type="text"
-            className="p-2 border rounded-l-md max-w-[250px] pl-9"
+            className="text-black p-2 border rounded-l-md max-w-[250px] pl-9"
             placeholder="Search Pokémon"
             value={searchInput}
             onChange={(e) => {
@@ -85,7 +85,7 @@ export default function Home() {
             />
             <div className='p-4 h-1/2 flex flex-col justify-between bg-[#f8f8f8] rounded-b-xl'>
               <Link href={`/pokemon/${pokemon.name}`}>
-                <h2 className="text-xl font-semibold capitalize">{pokemon.name}</h2>
+                <h2 className="text-black text-xl font-semibold capitalize">{pokemon.name}</h2>
               </Link>
               <Link href={`/pokemon/${pokemon.name}`}>
                 <p className="text-sm font-light text-blue-500 capitalize">Details &rarr;</p>
