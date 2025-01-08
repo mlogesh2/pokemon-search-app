@@ -22,7 +22,7 @@ export default async function PokemonDetails({ params }) {
                 <Link href="/" className='text-blue-500'>
                     Home
                 </Link>
-                <span className=''> &gt; {pokemon.name}</span>
+                <span className='text-black'> &gt; {pokemon.name}</span>
             </nav>
             <div className='bg-white border mt-10 rounded-lg justify-self-center max-w-[400px] hover:shadow-lg'>
                 {/* <h1 className="text-3xl font-bold capitalize mb-4">{pokemon.name}</h1> */}
@@ -34,7 +34,7 @@ export default async function PokemonDetails({ params }) {
                     height={500}
                     className="w-full h-1/2 max-h-[300px] object-contain p-4 bg-[#60e2c9] rounded-t-lg"
                 />
-                <div className='p-4 h-1/2 flex flex-col justify-between bg-[#fdc666] rounded-b-lg'>
+                <div className='p-4 h-1/2 flex flex-col justify-between bg-[#fdc666] text-black rounded-b-lg'>
                     <p><strong>Name:</strong> {pokemon.name}</p>
                     <p><strong>Type:</strong> {pokemon?.types?.map(t => t?.type?.name)?.join(", ")}</p>
                     <p><strong>Stats:</strong> {pokemon?.stats?.map(s => s?.stat?.name)?.join(", ")}</p>
