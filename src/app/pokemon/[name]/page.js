@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Breadcrumb from '@/components/Breadcrumb';
 
 
 export async function generateStaticParams() {
@@ -18,12 +18,7 @@ export default async function PokemonDetails({ params }) {
 
     return (
         <div>
-            <nav className="mb-4">
-                <Link href="/" className='text-blue-500'>
-                    Home
-                </Link>
-                <span className='text-black'> &gt; {pokemon.name}</span>
-            </nav>
+            <Breadcrumb pokemon={pokemon} />
             <div className='bg-white border mt-10 rounded-lg justify-self-center max-w-[400px] hover:shadow-lg'>
                 {/* <h1 className="text-3xl font-bold capitalize mb-4">{pokemon.name}</h1> */}
                 <Image
